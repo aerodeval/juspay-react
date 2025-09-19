@@ -1,9 +1,5 @@
 import { createTheme } from '@mui/material/styles'
 
-
-//Custom theme for application to use in MUI
-import { createTheme } from '@mui/material/styles'
-
 // Light theme
 export const lightTheme = createTheme({
   palette: {
@@ -92,4 +88,4 @@ export const darkTheme = createTheme({
 
 })
 
-export default theme
+export default lightTheme;

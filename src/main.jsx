@@ -5,13 +5,13 @@ import App from './App.jsx'
 
 
 // MUI
-import theme from './styles/theme.js'
+import  { lightTheme } from './styles/theme.js'
 import { ThemeProvider} from '@mui/material/styles'
 
 createRoot(document.getElementById('root')).render(
   
   <StrictMode>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={lightTheme}>
     <App /></ThemeProvider>
   </StrictMode>,
 )
