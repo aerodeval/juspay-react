@@ -38,8 +38,18 @@ export const lightTheme = createTheme({
     h2: { fontSize: '1.5rem', fontWeight: 600 },
     body1: { fontSize: '1rem' },
   },
-  shape: {
-    borderRadius: 16,           // --radius-lg
+
+
+  components: {
+    MuiCard: {
+        styleOverrides: {
+          root: {
+            borderRadius: 16,
+            padding: '24px',
+            boxShadow: 'none',
+          },
+        },
+      },
   },
 
 })
@@ -88,4 +98,3 @@ export const darkTheme = createTheme({
 
 })
 
-export default lightTheme;
