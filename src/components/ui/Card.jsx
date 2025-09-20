@@ -3,15 +3,16 @@ import CardMUI from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-export default function Card({ minWidth = 275, title="Customers" , data }) {
+export default function Card({ minWidth = 275, title="Customers" , data , cardColor }) {
   return (
-    <CardMUI sx={{ minWidth }}> 
+    <CardMUI sx={{ minWidth:minWidth,  backgroundColor: cardColor }}> 
       {title && (
-        <Typography variant="h6" component="div" gutterBottom>
-          {title}
-        </Typography>
+        <div className='card-title'>
+            <h2>
+          {title}</h2>
+        </div>
       )}
-      <CardContent sx={{ p: 0 }}> {/* padding handled at Card level */}
+      <CardContent sx={{ p: 0 ,paddingBottom: "0 !important"}}> {/* padding handled at Card level */}
         {data}
       </CardContent>
 

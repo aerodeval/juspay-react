@@ -156,6 +156,10 @@ export const userData =
     bug: "/src/assets/icons/BugBeetle.svg",
     user: "/src/assets/icons/User.svg",
     subscription: "/src/assets/icons/Broadcast.svg",
+    ArrowRise: "/src/assets/icons/ArrowRise.svg",
+    ArrowFall: "/src/assets/icons/ArrowFall.svg"
+    
+
   };
   
 

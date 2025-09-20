@@ -15,29 +15,11 @@
 
 .main-screen {
   flex: 1;
-  padding: var(--space-6);
-  background: var(--light);
-  overflow-y: auto;
+  padding: 28px;
 }
 
-.content-area {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.content-area h2 {
-  font-size: var(--text-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--foreground);
-  margin: 0 0 var(--space-4) 0;
-}
 
-.content-area p {
-  font-size: var(--text-md);
-  color: var(--black-70);
-  margin: 0 0 var(--space-6) 0;
-  line-height: 1.6;
-}
 
 .cards-grid {
   display: grid;
