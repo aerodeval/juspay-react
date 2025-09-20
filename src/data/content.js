@@ -125,7 +125,7 @@ export const userData =
 
   export const notifications =[
     { id:1,
-      message: "You have a bug that needs...",
+      message: "You have a bug that needs to be fixed.",
       timestamp: "Just now",
       type: "bug",
       icon: "bug",
@@ -137,7 +137,7 @@ export const userData =
       icon: "user"
     },
     {id:3,
-     message: "You have a bug that needs...",
+     message: "You have a bug that needs to be fixed.",
       timestamp: "12 hours ago",
       type: "bug",
       icon: "bug"
@@ -153,9 +153,9 @@ export const userData =
 
   export const iconMap = {
     task: "/src/assets/icons/Checkbox.svg",
-    bug: "/src/assets/icons/Bug.svg",
+    bug: "/src/assets/icons/BugBeetle.svg",
     user: "/src/assets/icons/User.svg",
-    subscription: "/src/assets/icons/Radio.svg",
+    subscription: "/src/assets/icons/Broadcast.svg",
   };
   
 
@@ -163,29 +163,63 @@ export const userData =
   export const contactsData =[
     {
       "name": "Natali Craig",
-      "avatar": "/src/assets/images/image.pngg"
+      "avatar": "/src/assets/images/female15.png"
     },
     {
       "name": "Drew Cano",
-      "avatar": "/src/assets/images/image.png"
+      "avatar": "/src/assets/images/male08.png"
     },
     {
       "name": "Orlando Diggs",
-      "avatar": "/src/assets/images/image.png"
+      "avatar": "/src/assets/images/male06.png"
     },
     {
       "name": "Andi Lane",
-      "avatar": "/src/assets/images/image.png"
+      "avatar": "/src/assets/images/female08.png"
     },
     {
       "name": "Kate Morrison",
-      "avatar": "/src/assets/images/image.png"
+      "avatar": "/src/assets/images/female09.png"
     },
     {
       "name": "Koray Okumus",
-      "avatar": "/src/assets/images/image.png"
+      "avatar": "/src/assets/images/3d03.png"
     }
   ]
+
+
+  export const activities = [
+    {
+      id: 1,
+      avatarImg: "/src/assets/images/3d05.png",
+      text: "You have a bug that needs to be fixed.",
+      time: "Just now",
+    },
+    {
+      id: 2,
+      avatarImg: "/src/assets/images/iconset.png",
+      text: "Released a new version",
+      time: "59 minutes ago",
+    },
+    {
+      id: 3,
+      avatarImg: "/src/assets/images/iconset-1.png",
+      text: "Submitted a bug",
+      time: "12 hours ago",
+    },
+    {
+      id: 4,
+      avatarImg: "/src/assets/images/iconset-2.png",
+      text: "Modified A data in Page X",
+      time: "Feb 2, 2023",
+    },
+    {
+      id: 5,
+      avatarImg: "/src/assets/images/iconset-3.png",
+      text: "Deleted a page in Project X",
+      time: "1 hour ago",
+    },
+  ];
   
 
   [

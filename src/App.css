@@ -1,7 +1,3 @@
-/* Import all component CSS files */
-@import './components/layouts/Sidebar/Sidebar.css';
-/* @import './components/layouts/Header/Header.css'; */
-@import './components/layouts/RightPanel/RightPanel.css';
 
 /* App Layout Styles */
 .app-layout {
@@ -48,6 +44,13 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--space-4);
   margin-top: var(--space-6);
+}
+
+
+.avatar-text{
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
 }
 
 /* Mobile responsiveness */

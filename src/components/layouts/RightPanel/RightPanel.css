@@ -12,6 +12,11 @@
   overflow-y: auto;
 }
 
+.panel-content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
 
 
 .notifications {
@@ -39,33 +44,29 @@
   transform: translateY(-1px);
 }
 
-.action-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.7;
-}
+
 
 .section-title {
   font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
   color: var(--foreground);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  line-height: 20px;
+  padding: var(--space-2) var(--space-1) ;
 }
 
 .activity-list,
 .notification-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
 }
 
 .activity-item,
 .notification-item {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-3);
-  padding: var(--space-2);
+  gap: var(--space-2);
+  padding: var(--space-1);
   border-radius: var(--radius-md);
   transition: background-color 0.2s ease;
 }
@@ -74,6 +75,29 @@
 .notification-item:hover {
   background: var(--light);
 }
+
+
+.notification-icon{
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+}
+
+.notification-list .notification-item:nth-child(odd) .notification-icon {
+  background-color: var(--blue);
+}
+
+.notification-list .notification-item:nth-child(even) .notification-icon {
+  background-color: var(--purple);
+}
+.notification-icon  img{
+  padding: 4px;
+  width: 16px;
+  height: 16px;
+
+}
+
+
 
 .activity-icon {
   width: 32px;
@@ -102,14 +126,17 @@
 .notification-text {
   font-size: var(--text-sm);
   color: var(--foreground);
-  margin: 0 0 var(--space-1) 0;
-  line-height: 1.4;
+  line-height: 20px;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
 }
 
 .activity-time,
 .notification-time {
   font-size: var(--text-xs);
-  color: var(--black-50);
+  color: var(--black-40);
 }
 
 .notification-dot {
@@ -121,6 +148,15 @@
   margin-top: var(--space-2);
 }
 
+.contacts, .contact-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.contact-avatar{
+  padding: var(--space-1);
+
+}
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
   .right-panel {

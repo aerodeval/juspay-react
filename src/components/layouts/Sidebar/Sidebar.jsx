@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Sidebar.css';
 import ImageAvatar from '../../ui/Avatar';
 import { navigationContent,userData } from '../../../data/content';
 
@@ -51,7 +52,7 @@ function Sidebar(props) {
       <div className="user-header">
           <div>
   
-<ImageAvatar imgSrc={userData.userImg} alt={userData.name + "image"} />
+<ImageAvatar imgSrc={userData.userImg} text={"ByeWind"} alt={userData.name + "image"} />
 
  </div>
       </div>
