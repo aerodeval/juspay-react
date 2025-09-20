@@ -7,7 +7,17 @@
     --background: #ffffff;
     --foreground: #1C1C1C;
     --brand:#1C1C1C;
-    --black:#1C1C1C;
+    --black: #1c1c1c;
+    --black-5: #1c1c1c0D;
+    --black-10: #1c1c1c1A;
+    --black-20: #1c1c1c33;
+    --black-30: #1c1c1c4D;
+    --black-40: #1c1c1c66;
+    --black-50: #1c1c1c80;
+    --black-60: #1c1c1c99;
+    --black-70: #1c1c1cB3;
+    --black-80: #1c1c1cCC;
+    --black-90: #1c1c1cE6;
     --blue:#E3F5FF;
     --purple:#E5ECF6;
     --light:#F7F9FB;
@@ -41,7 +51,7 @@
     --text-xl: 24px;
     --font-weight-normal: 400;
     --font-weight-bold: 600;
-    --font-sans: 'Inter', Arial, Helvetica, sans-serif;
+ 
   
       /* z-index */
       --z-dropdown: 1000;
@@ -57,6 +67,16 @@
       --foreground: #FFFFFF;
       --brand:#C6C7F8;
       --black:#FFFFFF;
+      --black-5: #ffffff0D;  /* 5% opacity */
+      --black-10: #ffffff1A; /* 10% */
+      --black-20: #ffffff33; /* 20% */
+      --black-30: #ffffff4D; /* 30% */
+      --black-40: #ffffff66; /* 40% */
+      --black-50: #ffffff80; /* 50% */
+      --black-60: #ffffff99; /* 60% */
+      --black-70: #ffffffB3; /* 70% */
+      --black-80: #ffffffCC; /* 80% */
+      --black-90: #ffffffE6; /* 90% */
       --light: rgba(255, 255, 255, 0.05); /* 5% opacity white */
       --white:#1C1C1C;
       --rejected: rgba(28, 28, 28, 0.4); /* 40% opacity */
@@ -67,16 +87,19 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-sans);
+    font-family: 'Inter' !important;
   }
   
+
+  * {
+    font-family: inherit; }
 
 
   
 /* Regular 400 */
 @font-face {
     font-family: 'Inter';
-    src: url('./assets/fonts/Inter/Inter-Regular.woff2') format('woff2');
+    src: url('../assets/fonts/Inter/Inter-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -85,7 +108,7 @@
   /* Medium 500 */
   @font-face {
     font-family: 'Inter';
-    src: url('./assets/fonts/Inter/Inter-Medium.woff2') format('woff2');
+    src: url('../assets/fonts/Inter/Inter-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -94,11 +117,10 @@
   /* Bold 600/700 */
   @font-face {
     font-family: 'Inter';
-    src: url('./assets/fonts/Inter/Inter-Bold.woff2') format('woff2');
+    src: url('../assets/fonts/Inter/Inter-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
-  
   
   

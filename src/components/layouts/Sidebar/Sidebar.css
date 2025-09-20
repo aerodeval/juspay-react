@@ -1,0 +1,375 @@
+/* Sidebar Container */
+.sidebar{
+  padding: 20px 16px;
+
+}
+
+/* Mobile Header */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--brand);
+  color: var(--white);
+  z-index: 1200;
+  align-items: center;
+  /* padding: 0 var(--space-4);  */
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+  padding: var(--space-2);
+  margin-right: var(--space-4);
+}
+
+.app-title {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 212px;
+  border-right: 1px solid color-mix(in srgb, var(--black) 10%, transparent);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1200;
+  transition: transform 0.3s ease;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.sidebar-header {
+  padding: 16px;
+  background: #1976d2;
+  color: white;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.sidebar-nav {
+ display: flex;
+ flex-direction: column;
+ row-gap:var(--space-4);
+
+}
+
+/* Category */
+
+.category{
+  padding-bottom: var(--space-3);
+}
+.recents-header{
+  padding: 0 0 var(--space-3) 0;
+}
+
+.category-header {
+  padding: var(--space-1) var(--space-3);
+}
+
+.category-title {
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--black-40)
+
+}
+
+/* Section */
+
+.section-button {
+ 
+  width: 100%;
+  background: none;
+  border: none;
+  padding: var(--space-1) var(--space-2) ;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  /* position: relative; */
+}
+
+
+
+/* 
+.no-icon::before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  left: -9px;
+  top: -7.8px;
+  width: 4px;
+  height: 16px;
+  background-color: var(--brand);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+} */
+
+
+.section-button:focus .no-icon::before,
+.section-button:active .no-icon::before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  left: -9px;
+  top: -7.8px;
+  width: 4px;
+  height: 16px;
+  background-color: var(--brand);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section-button:focus .no-icon::before,
+.section-button:active .no-icon::before {
+  opacity: 1; 
+}
+
+
+
+
+nav .subsection-button::before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  left: 1px;
+  top: 5.4px;
+  width: 4px;
+  height: 16px;
+  background-color: var(--brand);
+  opacity: 0;                    
+  transition: opacity 0.3s ease;  
+}
+
+
+nav .subsection-button:focus::before {
+  opacity: 1; 
+}
+
+
+
+.section-button:hover {
+  background-color: var(--light);
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.section-icon {
+  display: flex;
+  align-items: center;
+}
+
+.section-text, .subsection-text {
+  font-size: var(--text-sm);
+  color: var(--black);
+  font-weight: var(--font-weight-medium);
+
+}
+
+
+.section-button .expand-icon .arrow {
+  width: 16px;
+  height: 16px;
+  background-color: var(--black);
+  -webkit-mask: url("/src/assets/icons/ArrowLineRight.svg") no-repeat center;
+  mask: url("/src/assets/icons/ArrowLineRight.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: transform 0.3s ease; 
+}
+
+
+.section-button .expand-icon .arrow.open {
+  transform: rotate(90deg); 
+}
+
+
+
+/* Subsections */
+.subsections {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.subsections.open {
+  max-height: 500px;
+}
+
+.subsection-button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 4px 8px 4px 38px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+  border-radius: 8px;
+  position: relative;
+}
+
+.subsection-button:hover {
+  background: var(--light);
+}
+
+.subsection-button:active,.subsection-button:focus{
+  background: var(--black-5);
+}
+
+.subsection-icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Icon Styling */
+.section-icon img,
+.subsection-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Focus States */
+.section-button:focus
+ {
+  background-color:  var(--black-5) ;
+
+}
+
+/* Active States */
+.section-button:active {
+  background-color:  var(--black-5) ;
+
+}
+
+
+.no-icon{
+  width: var(--space-4);
+  position: relative;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--black-20);
+  transition: background-color 0.3s ease; /* smooth color change */
+}
+
+.recents-header .section button:is(:focus, :active) .dot,
+.recents-header .section button.active .dot {
+  background-color: var(--black);
+}
+
+.favourites-section div{
+  display: flex;
+  gap: 8px;
+  padding-right: 20px;
+  flex-direction: row;
+ 
+}
+
+
+/* .user-header{
+  padding: 20px 16px 0px 16px;
+} */
+
+.user-header div{
+  padding: var(--space-1);
+  display: flex;
+  gap:var(--space-2);
+  align-items: center;
+}
+
+.img-avatar{
+
+  width: 24px;
+  height: 24px;
+  border-radius: 80px;
+}
+.favourites-section div *{
+ padding: var(--space-1) var(--space-2);
+ color: var(--black-40);
+}
+
+.recent{
+color: var(--black-20) !important;
+}
