@@ -95,3 +95,139 @@ export const userData =
     userImg:"/src/assets/images/image.png",
     status: "Active"
   }
+
+
+  export const ecommerceStats =[
+    {
+      name: "Customers",
+      count: "3,781",
+      percentChange: "+11.01%",
+    
+    },
+    {
+      name: "Orders",
+      count: "1,219",
+      percentChange: "-0.03%",
+    },
+    {
+      name: "Customers",
+      count: "$695",
+      percentChange: "+11.01%",
+    },
+    {
+      name: "Customers",
+      count: "30.1%",
+      percentChange: "+6.08%",
+    },
+
+  ]
+
+
+  export const notifications =[
+    { id:1,
+      message: "You have a bug that needs...",
+      timestamp: "Just now",
+      type: "bug",
+      icon: "bug",
+    },
+    { id:2,
+     message: "New user registered",
+      timestamp: "59 minutes ago",
+      type: "user",
+      icon: "user"
+    },
+    {id:3,
+     message: "You have a bug that needs...",
+      timestamp: "12 hours ago",
+      type: "bug",
+      icon: "bug"
+    },
+    { id:4,
+     message: "Andi Lane subscribed to you",
+      timestamp: "Today, 11:59 AM",
+      type: "subscription",
+      icon: "radio"
+    }
+  ]
+
+
+  export const iconMap = {
+    task: "/src/assets/icons/Checkbox.svg",
+    bug: "/src/assets/icons/Bug.svg",
+    user: "/src/assets/icons/User.svg",
+    subscription: "/src/assets/icons/Radio.svg",
+  };
+  
+
+
+  export const contactsData =[
+    {
+      "name": "Natali Craig",
+      "avatar": "/src/assets/images/image.pngg"
+    },
+    {
+      "name": "Drew Cano",
+      "avatar": "/src/assets/images/image.png"
+    },
+    {
+      "name": "Orlando Diggs",
+      "avatar": "/src/assets/images/image.png"
+    },
+    {
+      "name": "Andi Lane",
+      "avatar": "/src/assets/images/image.png"
+    },
+    {
+      "name": "Kate Morrison",
+      "avatar": "/src/assets/images/image.png"
+    },
+    {
+      "name": "Koray Okumus",
+      "avatar": "/src/assets/images/image.png"
+    }
+  ]
+  
+
+  [
+    {
+      "orderId": "CM9801",
+      "user": "Natali Craig",
+      "project": "Landing Page",
+      "address": "Meadow Lane Oakland",
+      "date": "Just now",
+      "status": "In Progress"
+    },
+    {
+      "orderId": "CM9802",
+      "user": "Kate Morrison",
+      "project": "CRM Admin pages",
+      "address": "Larry San Francisco",
+      "date": "A minute ago",
+      "status": "Complete"
+    },
+    {
+      "orderId": "CM9803",
+      "user": "Drew Cano",
+      "project": "Client Project",
+      "address": "Boyaval Avenue Ocala",
+      "date": "1 hour ago",
+      "status": "Pending"
+    },
+    {
+      "orderId": "CM9804",
+      "user": "Orlando Diggs",
+      "project": "Admin Dashboard",
+      "address": "Westbourn Baton Rouge",
+      "date": "Yesterday",
+      "status": "Approved"
+    },
+    {
+      "orderId": "CM9805",
+      "user": "Andi Lane",
+      "project": "App Landing Page",
+      "address": "Nest Lane Olivette",
+      "date": "Feb 2, 2023",
+      "status": "Rejected"
+    }
+  ]
+  

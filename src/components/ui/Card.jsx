@@ -1,31 +1,20 @@
 import * as React from 'react';
-
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
+import CardMUI from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-
-export default function Card({minWidth,title,data}) {
+export default function Card({ minWidth = 275, title="Customers" , data }) {
   return (
-    <Card sx={{ minWidth: {minWidth} }}>
-      <CardContent>
-        <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
-          Word of the Day
+    <CardMUI sx={{ minWidth }}> 
+      {title && (
+        <Typography variant="h6" component="div" gutterBottom>
+          {title}
         </Typography>
-        <Typography variant="h5" component="div">
-        </Typography>
-        <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>adjective</Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
+      )}
+      <CardContent sx={{ p: 0 }}> {/* padding handled at Card level */}
+        {data}
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+
+    </CardMUI>
   );
 }

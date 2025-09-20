@@ -47,10 +47,16 @@
 }
 
 /* Sidebar */
+
+.sidebar-container{
+  width: 212px;
+  height: 100vh;
+  position: relative;
+}
 .sidebar {
   width: 212px;
   border-right: 1px solid color-mix(in srgb, var(--black) 10%, transparent);
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   height: 100vh;

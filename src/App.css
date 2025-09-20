@@ -1,2 +1,77 @@
 /* Import all component CSS files */
 @import './components/layouts/Sidebar/Sidebar.css';
+/* @import './components/layouts/Header/Header.css'; */
+@import './components/layouts/RightPanel/RightPanel.css';
+
+/* App Layout Styles */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.main-screen {
+  flex: 1;
+  padding: var(--space-6);
+  background: var(--light);
+  overflow-y: auto;
+}
+
+.content-area {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-area h2 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--foreground);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.content-area p {
+  font-size: var(--text-md);
+  color: var(--black-70);
+  margin: 0 0 var(--space-6) 0;
+  line-height: 1.6;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .main-screen {
+    padding: var(--space-4);
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  
+  .content-area h2 {
+    font-size: var(--text-lg);
+  }
+  
+  .content-area p {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-screen {
+    padding: var(--space-3);
+  }
+}

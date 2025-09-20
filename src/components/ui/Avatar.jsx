@@ -2,6 +2,7 @@ import Avatar from '@mui/material/Avatar';
 
 export default function ImageAvatar({ imgSrc, alt = "Avatar" }) {
   return (
+    <div>
     <Avatar 
       alt={alt}
       src={imgSrc}
@@ -18,5 +19,7 @@ export default function ImageAvatar({ imgSrc, alt = "Avatar" }) {
         }
       }} 
     />
+           <span style={{fontSize:"14px"}}>ByeWind</span>
+    </div>
   );
 }

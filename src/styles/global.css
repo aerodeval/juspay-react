@@ -88,6 +88,7 @@
     background: var(--background);
     color: var(--foreground);
     font-family: 'Inter' !important;
+    margin: 0;
   }
   
 

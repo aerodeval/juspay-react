@@ -53,7 +53,7 @@ function Sidebar(props) {
   
 <ImageAvatar imgSrc={userData.userImg} alt={userData.name + "image"} />
 
-        <span>ByeWind</span></div>
+ </div>
       </div>
       <div className="recents-header">
         <div className=" favourites-section">
@@ -132,33 +132,33 @@ function Sidebar(props) {
 
 
   return (
-    <div className="sidebar-container">
-      {/* Mobile Header */}
-      <header className="mobile-header">
-        <button 
-          className="menu-button"
-          onClick={handleDrawerToggle}
-          aria-label="open drawer"
-        >
-          ☰
-        </button>
-        <h1 className="app-title">Dashboard</h1>
-      </header>
+    // <div className="sidebar-container">
+    //   {/* Mobile Header */}
+    //   <header className="mobile-header">
+    //     <button 
+    //       className="menu-button"
+    //       onClick={handleDrawerToggle}
+    //       aria-label="open drawer"
+    //     >
+    //       ☰
+    //     </button>
+    //     <h1 className="app-title">Dashboard</h1>
+    //   </header>
 
-      {/* Mobile Overlay */}
-      {mobileOpen && (
-        <div 
-          className="mobile-overlay"
-          onClick={handleDrawerClose}
-        ></div>
-      )}
+    //   {/* Mobile Overlay */}
+    //   {mobileOpen && (
+    //     <div 
+    //       className="mobile-overlay"
+    //       onClick={handleDrawerClose}
+    //     ></div>
+    //   )}
 
-      {/* Sidebar */}
+    //   {/* Sidebar */}
       <aside className={`sidebar ${mobileOpen ? 'mobile-open' : ''}`}>
         {drawer}
       </aside>
 
-    </div>
+    // </div>
   );
 }
 
