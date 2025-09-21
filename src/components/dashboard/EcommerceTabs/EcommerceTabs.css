@@ -41,3 +41,17 @@ line-height: 20px; /* 142.857% */
     gap: 28px; 
 }
 
+/* Tablets and below (max-width: 1024px) → 1 column */
+@media (max-width: 1024px) {
+    .eco-tabs-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  /* Mobiles (max-width: 600px) → still 1 column but smaller gap */
+  @media (max-width: 600px) {
+    .eco-tabs-grid {
+      grid-template-columns: 1fr;
+      gap: 16px; /* reduce gap on small screens */
+    }
+  }

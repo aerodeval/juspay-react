@@ -5,7 +5,7 @@ import { totalSales} from '../../../data/content';
 export default function TotalSales() {
   return (
 <Card title='Total Sales'
-minWidth={200} height={260}
+minWidth={200} 
 data={<CustomPieChart pieData={totalSales}></CustomPieChart>}
 >
 
