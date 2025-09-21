@@ -224,7 +224,156 @@ export const userData =
       time: "1 hour ago",
     },
   ];
+
+
+
+  export const cityData = [
+    { city: 'New York', value: '72K' },
+    { city: 'San Francisco', value: '39K' },
+    { city: 'Sydney', value: '25K' },
+    { city: 'Singapore', value: '61K' }
+  ];
+
   
+
+
+
+export const topSellingProducts = [
+  {
+    id: 1,
+    name: "ASOS Ridley High Waist",
+    price: 79.49,
+    quantity: 82,
+    amount: 6518.18
+  },
+  {
+    id: 2,
+    name: "Marco Lightweight Shirt",
+    price: 128.50,
+    quantity: 37,
+    amount: 4754.50
+  },
+  {
+    id: 3,
+    name: "Half Sleeve Shirt",
+    price: 39.99,
+    quantity: 64,
+    amount: 2559.36
+  },
+  {
+    id: 4,
+    name: "Lightweight Jacket",
+    price: 20.00,
+    quantity: 184,
+    amount: 3680.00
+  },
+  {
+    id: 5,
+    name: "Marco Shoes",
+    price: 79.49,
+    quantity: 64,
+    amount: 1965.81
+  }
+];
+
+
+export const productColumns = [
+  { 
+    key: 'name', 
+    label: 'Name', 
+    align: 'left' 
+  },
+  { 
+    key: 'price', 
+    label: 'Price', 
+    align: 'left',
+    format: (value) => `$${value.toFixed(2)}`
+  },
+  { 
+    key: 'quantity', 
+    label: 'Quantity', 
+    align: 'left' 
+  },
+  { 
+    key: 'amount', 
+    label: 'Amount', 
+    align: 'left',
+    format: (value) => `$${value.toLocaleString('en-US', { minimumFractionDigits: 2 })}`
+  }
+];
+
+
+
+
+export const totalSales= [
+
+  {key:'Direct',
+    sale: 300.56
+  },
+  {key:'Affilliate',
+    sale: 135.18
+  }, {key:'Sponsored',
+    sale: 154.02
+  },
+  {key: 'E-mail',
+    sale: 48.96
+  }
+]
+
+
+export const BarchartData=[
+
+    {
+      name: 'Jan',
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: 'Page B',
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: 'Page C',
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: 'Page D',
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: 'Page E',
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: 'Page F',
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: 'Page G',
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+
+];
+
+
+
+
+
+
+
 
   [
     {

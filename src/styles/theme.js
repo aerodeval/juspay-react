@@ -50,6 +50,21 @@ export const lightTheme = createTheme({
           },
         },
       },
+
+
+
+      MuiTableHead: {
+        styleOverrides: {
+          root: {
+            "& .MuiTableCell-root": {
+              fontWeight: 400,
+              fontSize:"12px",
+              color:" #9FA0A2"
+           
+            },
+          },
+        },
+      },
   },
 
 })
