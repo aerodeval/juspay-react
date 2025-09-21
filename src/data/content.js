@@ -1,3 +1,5 @@
+
+
 export const navigationContent = {
   Dashboards: {
     sections: [
@@ -157,11 +159,23 @@ export const userData =
     user: "/src/assets/icons/User.svg",
     subscription: "/src/assets/icons/Broadcast.svg",
     ArrowRise: "/src/assets/icons/ArrowRise.svg",
-    ArrowFall: "/src/assets/icons/ArrowFall.svg"
-    
-
+    ArrowFall: "/src/assets/icons/ArrowFall.svg",
+    Add:"/src/assets/icons/Add.svg",
+    Filter:"/src/assets/icons/FunnelSimple.svg",
+    ArrowsDownsUp: "/src/assets/icons/ArrowsDownUp.svg",
+    Search:"/src/assets/icons/Search.svg",
+    Calendar:"/src/assets/icons/CalendarBlank.svg",
+    ArrowLineLeft:"/src/assets/icons/ArrowLineLeft.svg",
+      ArrowLineRight:"/src/assets/icons/ArrowLineRight.svg",
+      theme:"/src/assets/icons/Sun.svg",
+         history:"/src/assets/icons/ClockCounterClockwise.svg",
+           notification:"/src/assets/icons/Bell.svg",
+           sidebar:"/src/assets/icons/Sidebar.svg",
+           star:"/src/assets/icons/Star.svg"
   };
   
+
+
 
 
   export const contactsData =[
@@ -367,7 +381,7 @@ export const stackedChartData = [
 
 
 
-  [
+ export const OrdersList=[
     {
       "orderId": "CM9801",
       "user": "Natali Craig",
@@ -406,6 +420,86 @@ export const stackedChartData = [
       "project": "App Landing Page",
       "address": "Nest Lane Olivette",
       "date": "Feb 2, 2023",
+      "status": "Rejected"
+    },
+    {
+      "orderId": "CM9806",
+      "user": "Sarah Johnson",
+      "project": "E-commerce Site",
+      "address": "Main Street Boston",
+      "date": "2 hours ago",
+      "status": "In Progress"
+    },
+    {
+      "orderId": "CM9807",
+      "user": "Michael Chen",
+      "project": "Mobile App",
+      "address": "Oak Avenue Seattle",
+      "date": "3 hours ago",
+      "status": "Complete"
+    },
+    {
+      "orderId": "CM9808",
+      "user": "Emily Davis",
+      "project": "Portfolio Website",
+      "address": "Pine Street Denver",
+      "date": "4 hours ago",
+      "status": "Pending"
+    },
+    {
+      "orderId": "CM9809",
+      "user": "David Wilson",
+      "project": "Blog Platform",
+      "address": "Cedar Lane Austin",
+      "date": "5 hours ago",
+      "status": "Approved"
+    },
+    {
+      "orderId": "CM9810",
+      "user": "Lisa Anderson",
+      "project": "SaaS Dashboard",
+      "address": "Maple Drive Portland",
+      "date": "6 hours ago",
+      "status": "Rejected"
+    },
+    {
+      "orderId": "CM9811",
+      "user": "Robert Taylor",
+      "project": "API Integration",
+      "address": "Elm Street Chicago",
+      "date": "7 hours ago",
+      "status": "In Progress"
+    },
+    {
+      "orderId": "CM9812",
+      "user": "Jennifer Brown",
+      "project": "Data Analytics",
+      "address": "First Avenue Miami",
+      "date": "8 hours ago",
+      "status": "Complete"
+    },
+    {
+      "orderId": "CM9813",
+      "user": "Christopher Lee",
+      "project": "Cloud Migration",
+      "address": "Second Street Phoenix",
+      "date": "9 hours ago",
+      "status": "Pending"
+    },
+    {
+      "orderId": "CM9814",
+      "user": "Amanda Garcia",
+      "project": "Security Audit",
+      "address": "Third Avenue Dallas",
+      "date": "10 hours ago",
+      "status": "Approved"
+    },
+    {
+      "orderId": "CM9815",
+      "user": "James Martinez",
+      "project": "Performance Optimization",
+      "address": "Fourth Street Houston",
+      "date": "11 hours ago",
       "status": "Rejected"
     }
   ]
