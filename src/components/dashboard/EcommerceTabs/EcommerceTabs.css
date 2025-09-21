@@ -34,3 +34,10 @@ font-style: normal;
 font-weight: 600;
 line-height: 20px; /* 142.857% */
 }
+
+.eco-tabs-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 28px; 
+}
+
