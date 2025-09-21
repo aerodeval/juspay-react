@@ -3,9 +3,9 @@ import './RightPanel.css';
 import {notifications,iconMap, activities,contactsData} from "../../../data/content"
 import ImageAvatar from '../../ui/Avatar';
 
-function RightPanel() {
+function RightPanel({ isOpen, isMobile, onClose }) {
   return (
-    <aside className="right-panel">
+    <aside className={`right-panel ${isOpen && isMobile ? 'mobile-open' : ''} ${isMobile ? 'mobile-right-panel' : ''}`}>
       <div className="panel-content">
     
       <div className="notifications">

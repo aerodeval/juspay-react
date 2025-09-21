@@ -296,10 +296,7 @@ nav .subsection-button:focus::before {
     transform: translateX(0);
   }
 
-  .main-content {
-    margin-left: 0;
-    padding-top: 60px;
-  }
+
 }
 
 @media (min-width: 769px) {

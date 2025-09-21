@@ -6,26 +6,11 @@ import { navigationContent,userData } from '../../../data/content';
 
 
 
-function Sidebar(props) {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [isClosing, setIsClosing] = React.useState(false);
+function Sidebar({ isOpen, isMobile, onClose }) {
   const [openSections, setOpenSections] = React.useState({});
   const location = useLocation();
 
-  const handleDrawerClose = () => {
-    setIsClosing(true);
-    setMobileOpen(false);
-  };
-
-  const handleDrawerTransitionEnd = () => {
-    setIsClosing(false);
-  };
-
-  const handleDrawerToggle = () => {
-    if (!isClosing) {
-      setMobileOpen(!mobileOpen);
-    }
-  };
+  // Remove old drawer functions since we're using props now
 
   const handleSectionClick = (sectionName) => {
     setOpenSections(prev => ({
@@ -66,8 +51,8 @@ function Sidebar(props) {
         </div>
         <div className="section">
           <Link 
-            to="/dashboard" 
-            className={`section-button ${location.pathname === '/' || location.pathname === '/dashboard' ? 'active' : ''}`}
+            to="/default" 
+            className={`section-button ${location.pathname === '/' || location.pathname === '/default' ? 'active' : ''}`}
           >
             <div className="dot"></div>
             <div className="section-content">
@@ -149,33 +134,9 @@ function Sidebar(props) {
 
 
   return (
-    // <div className="sidebar-container">
-    //   {/* Mobile Header */}
-    //   <header className="mobile-header">
-    //     <button 
-    //       className="menu-button"
-    //       onClick={handleDrawerToggle}
-    //       aria-label="open drawer"
-    //     >
-    //       ☰
-    //     </button>
-    //     <h1 className="app-title">Dashboard</h1>
-    //   </header>
-
-    //   {/* Mobile Overlay */}
-    //   {mobileOpen && (
-    //     <div 
-    //       className="mobile-overlay"
-    //       onClick={handleDrawerClose}
-    //     ></div>
-    //   )}
-
-    //   {/* Sidebar */}
-      <aside className={`sidebar ${mobileOpen ? 'mobile-open' : ''}`}>
-        {drawer}
-      </aside>
-
-    // </div>
+    <aside className={`sidebar ${isOpen && isMobile ? 'mobile-open' : ''} ${isMobile ? 'mobile-sidebar' : ''}`}>
+      {drawer}
+    </aside>
   );
 }
 
