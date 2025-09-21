@@ -1,17 +1,49 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/global.css'
-import App from './App.jsx'
-
+import { StrictMode, useEffect } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles/global.css";
+import App from "./App.jsx";
 
 // MUI
-import  { lightTheme } from './styles/theme.js'
-import { ThemeProvider} from '@mui/material/styles'
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import { lightTheme } from "./styles/theme.js"; // always light
 
-createRoot(document.getElementById('root')).render(
-  
+// Redux
+import { Provider, useSelector, useDispatch } from "react-redux";
+import { store } from "../src/store/store.js";
+import { setTheme } from "../src/data/themeSlice.js";
+
+function Root() {
+  const mode = useSelector((state) => state.theme.mode);
+  const isDark = mode === "dark";
+  const dispatch = useDispatch();
+
+  // Detect system preference on first load
+  useEffect(() => {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    dispatch(setTheme(prefersDark ? "dark" : "light"));
+  }, [dispatch]);
+
+  // Apply global CSS class when theme changes
+  useEffect(() => {
+    if (isDark) {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  }, [isDark]);
+
+  return (
+    <ThemeProvider theme={lightTheme}> {/* always light for MUI */}
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
+  );
+}
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-        <ThemeProvider theme={lightTheme}>
-    <App /></ThemeProvider>
-  </StrictMode>,
-)
+    <Provider store={store}>
+      <Root />
+    </Provider>
+  </StrictMode>
+);
