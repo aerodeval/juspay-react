@@ -159,13 +159,13 @@ overflow: hidden;
 }
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
-  .right-panel {
+  .right-panel ,.sidebar {
     width: 240px;
   }
 }
 
 @media (max-width: 768px) {
-  .right-panel {
+  .right-panel ,.sidebar {
     display: none;
   }
 }

@@ -228,10 +228,10 @@ export const userData =
 
 
   export const cityData = [
-    { city: 'New York', value: '72K' },
-    { city: 'San Francisco', value: '39K' },
-    { city: 'Sydney', value: '25K' },
-    { city: 'Singapore', value: '61K' }
+    { city: 'New York', value: '72' },
+    { city: 'San Francisco', value: '39' },
+    { city: 'Sydney', value: '25' },
+    { city: 'Singapore', value: '61' }
   ];
 
   
@@ -321,51 +321,43 @@ export const totalSales= [
 ]
 
 
-export const BarchartData=[
-
-    {
-      name: 'Jan',
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: 'Page B',
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: 'Page C',
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: 'Page D',
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    },
-    {
-      name: 'Page E',
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
-    },
-    {
-      name: 'Page F',
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
-    },
-    {
-      name: 'Page G',
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
-    },
-
+export const stackedChartData = [
+  {
+    month: 'Jan',
+    projections: 8,    
+    actuals: 20,
+    monthFull: 'January'
+  },
+  {
+    month: 'Feb',
+    projections: 20,
+    actuals: 5,
+    monthFull: 'February'
+  },
+  {
+    month: 'Mar',
+    projections: 7,
+    actuals: 12,
+    monthFull: 'March'
+  },
+  {
+    month: 'Apr',
+    projections: 1,
+    actuals: 26,
+    monthFull: 'April'
+  },
+  {
+    month: 'May',
+    projections: 7,
+    actuals: 18,
+    monthFull: 'May'
+  },
+  {
+    month: 'Jun',
+    projections: 3,
+    actuals: 24,
+    monthFull: 'June'
+  }
 ];
 
 

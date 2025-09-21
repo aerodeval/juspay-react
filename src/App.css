@@ -38,6 +38,10 @@
   align-items: center;
 }
 
+.barchart-container{
+  padding-top: 16px;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .main-screen {
