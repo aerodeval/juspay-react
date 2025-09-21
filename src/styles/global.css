@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
 :root {
   
     font-synthesis: none;
@@ -19,6 +30,7 @@
     --black-80: #1c1c1cCC;
     --black-90: #1c1c1cE6;
     --blue:#E3F5FF;
+    --bar:#E6EEF5;
     --purple:#E5ECF6;
     --light:#F7F9FB;
     --white:#FFFFFF;
@@ -89,6 +101,11 @@
     color: var(--foreground);
     font-family: 'Inter' !important;
     margin: 0;
+  }
+
+  ul,li{
+    margin: 0;
+    padding: 0;
   }
   h1, h2, h3, h4, h5, h6,p{
     margin: 0;

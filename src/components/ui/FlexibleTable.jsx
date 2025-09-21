@@ -10,8 +10,8 @@ import Paper from '@mui/material/Paper';
 export default function FlexibleTable({ 
   data = [], 
   columns = [], 
-  title = "Data Table",
-  minWidth = 650,
+  title = "Product Table",
+  minWidth = 614,
   showBorders = true,
   dense = false 
 }) {
@@ -51,7 +51,7 @@ export default function FlexibleTable({
           {data.map((row, index) => (
             <TableRow
               key={row.id || row.name || index}
-              sx={{ 
+              sx={{ fontSize:"12px !important",
                 '&:hover': {
                   backgroundColor: 'rgba(0, 0, 0, 0.04)'
                 }
@@ -63,7 +63,7 @@ export default function FlexibleTable({
                   align={column.align || 'left'}
                   component={column.key === tableColumns[0].key ? "th" : "td"}
                   scope={column.key === tableColumns[0].key ? "row" : undefined}
-                  sx={{
+                  sx={{ fontSize:"12px !important",
                     borderBottom: "none",
                     padding:"8px 12px",
                     "&.MuiTableCell-head, &[scope=row]": {

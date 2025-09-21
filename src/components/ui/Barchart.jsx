@@ -25,8 +25,8 @@ export default function BarchartCustom(data) {
 
         />
  
-        <Bar dataKey="projections" stackId="a" fill="#D0DFEB" name="Projections"  radius={[4, 4, 0, 0]} />
-        <Bar dataKey="actuals" stackId="a" fill="#A8C5DA" name="Actuals"    />
+        <Bar dataKey="projections" stackId="a" fill="#D0DFEB" name="Projections"   />
+        <Bar dataKey="actuals" stackId="a" fill="#A8C5DA" name="Actuals"  radius={[4, 4, 0, 0]}  />
       </BarChart>
     </ResponsiveContainer>
 

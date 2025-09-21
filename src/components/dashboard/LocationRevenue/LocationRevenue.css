@@ -4,6 +4,10 @@
     gap: 16px;
     font-family: 'Inter' !important;
   }
+
+  .location-revenue-container .map{
+    padding-top: 16px   ;
+  }
   
   .location-revenue {
     display: flex;
@@ -33,3 +37,6 @@ line-height: 18px;
     border-radius: 80px 0 0 80px;
   }
   
+  .map{
+    max-width: 154px;
+  }

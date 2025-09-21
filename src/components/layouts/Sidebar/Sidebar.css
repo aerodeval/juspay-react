@@ -49,20 +49,23 @@
 /* Sidebar */
 
 .sidebar-container{
-  width: 212px;
-  height: 100vh;
   position: relative;
+  flex-shrink: 0;
 }
 .sidebar {
   width: 212px;
+  max-width: 212px;
+  min-width: 212px;
   border-right: 1px solid color-mix(in srgb, var(--black) 10%, transparent);
-  /* position: fixed; */
   top: 0;
   left: 0;
-  height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 1200;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
 /* Sidebar Content */

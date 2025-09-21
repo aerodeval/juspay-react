@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 export default function Card({ minWidth ,width, height, title="Customers" , data , cardColor }) {
   return (
-    <div style={{minWidth:minWidth}}>
+    <div style={{minWidth:minWidth, maxHeight:height}}>
     <CardMUI sx={{ backgroundColor: cardColor , height: height}}> 
       {title && (
         <div className='card-title'>

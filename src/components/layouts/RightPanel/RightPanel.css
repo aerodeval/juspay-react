@@ -1,5 +1,7 @@
 .right-panel {
   width: 280px;
+  max-width: 280px;
+  min-width: 280px;
   background: var(--white);
   border-left: 1px solid var(--black-10);
   display: flex;
@@ -10,6 +12,9 @@
   top: 0;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .panel-content{
@@ -159,13 +164,20 @@ overflow: hidden;
 }
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
-  .right-panel ,.sidebar {
+  .right-panel {
     width: 240px;
+    max-width: 240px;
+    min-width: 240px;
+  }
+  .sidebar {
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
   }
 }
 
 @media (max-width: 768px) {
-  .right-panel ,.sidebar {
+  .right-panel, .sidebar {
     display: none;
   }
 }
