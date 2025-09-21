@@ -66,9 +66,10 @@ export default function FlexibleTable({
                   sx={{
                     borderBottom: "none",
                     padding:"8px 12px",
-                    "&:first-of-type": {
-      padding: "8px 12px 8px 0px",  // different padding for first cell
-    },
+                    "&.MuiTableCell-head, &[scope=row]": {
+                      padding: "8px 12px 8px 0px",
+                    },
+
                   }}
                 >
                   {column.format ? column.format(row[column.key]) : row[column.key]}

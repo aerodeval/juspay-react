@@ -1,0 +1,35 @@
+.location-revenue-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'Inter' !important;
+  }
+  
+  .location-revenue {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .location-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+  }
+  
+  .location-bar {
+    height: 2px;
+    background-color: var(--bar);
+    border-radius: 80px;
+    overflow: hidden;
+  }
+  
+  .location-bar-fill {
+    height: 100%;
+    background-color: var(--secondary);
+    border-radius: 80px 0 0 80px;
+  }
+  
