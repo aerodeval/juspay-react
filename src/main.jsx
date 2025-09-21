@@ -5,12 +5,13 @@ import App from "./App.jsx";
 
 // MUI
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { lightTheme } from "./styles/theme.js"; // always light
+import { lightTheme,darkTheme } from "./styles/theme.js"; // always light
 
 // Redux
 import { Provider, useSelector, useDispatch } from "react-redux";
 import { store } from "../src/store/store.js";
 import { setTheme } from "../src/data/themeSlice.js";
+
 
 function Root() {
   const mode = useSelector((state) => state.theme.mode);
@@ -23,17 +24,14 @@ function Root() {
     dispatch(setTheme(prefersDark ? "dark" : "light"));
   }, [dispatch]);
 
-  // Apply global CSS class when theme changes
+  // Toggle .dark-theme class
   useEffect(() => {
-    if (isDark) {
-      document.body.classList.add("dark-theme");
-    } else {
-      document.body.classList.remove("dark-theme");
-    }
+    if (isDark) document.body.classList.add("dark-theme");
+    else document.body.classList.remove("dark-theme");
   }, [isDark]);
 
   return (
-    <ThemeProvider theme={lightTheme}> {/* always light for MUI */}
+    <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <App />
     </ThemeProvider>

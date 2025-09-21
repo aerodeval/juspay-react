@@ -111,5 +111,34 @@ export const darkTheme = createTheme({
     borderRadius: 16,
   },
 
+  components: {
+    MuiCard: {
+        styleOverrides: {
+          root: {
+            backgroundColor:"#282828",
+            borderRadius: 16,
+            padding: '24px',
+            boxShadow: 'none',
+          },
+        },
+      },
+
+
+
+      MuiTableHead: {
+        styleOverrides: {
+          root: {
+            "& .MuiTableCell-root": {
+              fontWeight: 400,
+              fontSize:"12px",
+              color:" #9FA0A2"
+           
+            },
+          },
+        },
+      },
+  },
+
+
 })
 
