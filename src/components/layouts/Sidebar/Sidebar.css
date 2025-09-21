@@ -329,6 +329,20 @@ nav .subsection-button:focus::before {
 
 }
 
+/* Link styles */
+.section-button {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-button.active {
+  background-color: var(--black-5);
+}
+
+.section-button.active .dot {
+  background-color: var(--brand);
+}
+
 
 .no-icon{
   width: var(--space-4);

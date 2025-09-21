@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 import ImageAvatar from '../../ui/Avatar';
 import { navigationContent,userData } from '../../../data/content';
@@ -9,6 +10,7 @@ function Sidebar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
   const [openSections, setOpenSections] = React.useState({});
+  const location = useLocation();
 
   const handleDrawerClose = () => {
     setIsClosing(true);
@@ -62,16 +64,30 @@ function Sidebar(props) {
         <span className='recent'>Recently</span></div>
 
         </div>
-<div class="section"><button class="section-button">
-  <div class="dot"></div><div class="section-content">
-    <div class="section-icon">
-    </div><span class="section-text">Overview</span></div></button>
-    </div>
-    <div class="section"><button class="section-button">
-  <div class="dot"></div><div class="section-content">
-    <div class="section-icon">
-    </div><span class="section-text">Projects</span></div></button>
-    </div>
+        <div className="section">
+          <Link 
+            to="/dashboard" 
+            className={`section-button ${location.pathname === '/' || location.pathname === '/dashboard' ? 'active' : ''}`}
+          >
+            <div className="dot"></div>
+            <div className="section-content">
+              <div className="section-icon"></div>
+              <span className="section-text">Dashboard</span>
+            </div>
+          </Link>
+        </div>
+        <div className="section">
+          <Link 
+            to="/orders" 
+            className={`section-button ${location.pathname === '/orders' ? 'active' : ''}`}
+          >
+            <div className="dot"></div>
+            <div className="section-content">
+              <div className="section-icon"></div>
+              <span className="section-text">Orders</span>
+            </div>
+          </Link>
+        </div>
       </div>
 
       <nav className="sidebar-nav">

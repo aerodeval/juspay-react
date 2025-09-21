@@ -1,31 +1,32 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Sidebar from './components/layouts/Sidebar/Sidebar'
-// import Header from './components/layouts/Header/Header'
 import RightPanel from './components/layouts/RightPanel/RightPanel'
-import Card from './components/ui/Card'
-import EcommerceTabs from './components/dashboard/EcommerceTabs/EcommerceTabs'
-import MainContent from './components/layouts/MainContent/MainContent'
+import Dashboard from './pages/Dashboard/Dashboard'
+import Orders from './pages/Orders/Orders'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="app-layout">
-      <Sidebar />
-      
-      <div className="main-content">
-        {/* <Header /> */}
+    <Router>
+      <div className="app-layout">
+        <Sidebar />
         
-        <main className="main-screen">
-          <div className="content-area">
-         <MainContent></MainContent>
-          </div>
-        </main>
+        <div className="main-content">
+          <main className="main-screen">
+            <div className="content-area">
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/orders" element={<Orders />} />
+              </Routes>
+            </div>
+          </main>
+        </div>
+        
+        <RightPanel />
       </div>
-      
-      <RightPanel />
-    </div>
+    </Router>
   )
 }
 
