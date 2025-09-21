@@ -94,7 +94,7 @@ export const userData =
     name: "WayWind",
     email: "john@example.com",
     role: "Admin",
-    userImg:"/src/assets/images/image.png",
+    userImg:"/assets/images/image.png",
     status: "Active"
   }
 
@@ -154,24 +154,24 @@ export const userData =
 
 
   export const iconMap = {
-    task: "/src/assets/icons/Checkbox.svg",
-    bug: "/src/assets/icons/BugBeetle.svg",
-    user: "/src/assets/icons/User.svg",
-    subscription: "/src/assets/icons/Broadcast.svg",
-    ArrowRise: "/src/assets/icons/ArrowRise.svg",
-    ArrowFall: "/src/assets/icons/ArrowFall.svg",
-    Add:"/src/assets/icons/Add.svg",
-    Filter:"/src/assets/icons/FunnelSimple.svg",
-    ArrowsDownsUp: "/src/assets/icons/ArrowsDownUp.svg",
-    Search:"/src/assets/icons/Search.svg",
-    Calendar:"/src/assets/icons/CalendarBlank.svg",
-    ArrowLineLeft:"/src/assets/icons/ArrowLineLeft.svg",
-      ArrowLineRight:"/src/assets/icons/ArrowLineRight.svg",
-      theme:"/src/assets/icons/Sun.svg",
-         history:"/src/assets/icons/ClockCounterClockwise.svg",
-           notification:"/src/assets/icons/Bell.svg",
-           sidebar:"/src/assets/icons/Sidebar.svg",
-           star:"/src/assets/icons/Star.svg"
+    task: "/assets/icons/Checkbox.svg",
+    bug: "/assets/icons/BugBeetle.svg",
+    user: "/assets/icons/User.svg",
+    subscription: "/assets/icons/Broadcast.svg",
+    ArrowRise: "/assets/icons/ArrowRise.svg",
+    ArrowFall: "/assets/icons/ArrowFall.svg",
+    Add:"/assets/icons/Add.svg",
+    Filter:"/assets/icons/FunnelSimple.svg",
+    ArrowsDownsUp: "/assets/icons/ArrowsDownUp.svg",
+    Search:"/assets/icons/Search.svg",
+    Calendar:"/assets/icons/CalendarBlank.svg",
+    ArrowLineLeft:"/assets/icons/ArrowLineLeft.svg",
+      ArrowLineRight:"/assets/icons/ArrowLineRight.svg",
+      theme:"/assets/icons/Sun.svg",
+         history:"/assets/icons/ClockCounterClockwise.svg",
+           notification:"/assets/icons/Bell.svg",
+           sidebar:"/assets/icons/Sidebar.svg",
+           star:"/assets/icons/Star.svg"
   };
   
 
@@ -181,27 +181,27 @@ export const userData =
   export const contactsData =[
     {
       "name": "Natali Craig",
-      "avatar": "/src/assets/images/female15.png"
+      "avatar": "/assets/images/female15.png"
     },
     {
       "name": "Drew Cano",
-      "avatar": "/src/assets/images/male08.png"
+      "avatar": "/assets/images/male08.png"
     },
     {
       "name": "Orlando Diggs",
-      "avatar": "/src/assets/images/male06.png"
+      "avatar": "/assets/images/male06.png"
     },
     {
       "name": "Andi Lane",
-      "avatar": "/src/assets/images/female08.png"
+      "avatar": "/assets/images/female08.png"
     },
     {
       "name": "Kate Morrison",
-      "avatar": "/src/assets/images/female09.png"
+      "avatar": "/assets/images/female09.png"
     },
     {
       "name": "Koray Okumus",
-      "avatar": "/src/assets/images/3d03.png"
+      "avatar": "/assets/images/3d03.png"
     }
   ]
 
@@ -209,31 +209,31 @@ export const userData =
   export const activities = [
     {
       id: 1,
-      avatarImg: "/src/assets/images/3d05.png",
+      avatarImg: "/assets/images/3d05.png",
       text: "You have a bug that needs to be fixed.",
       time: "Just now",
     },
     {
       id: 2,
-      avatarImg: "/src/assets/images/iconset.png",
+      avatarImg: "/assets/images/iconset.png",
       text: "Released a new version",
       time: "59 minutes ago",
     },
     {
       id: 3,
-      avatarImg: "/src/assets/images/iconset-1.png",
+      avatarImg: "/assets/images/iconset-1.png",
       text: "Submitted a bug",
       time: "12 hours ago",
     },
     {
       id: 4,
-      avatarImg: "/src/assets/images/iconset-2.png",
+      avatarImg: "/assets/images/iconset-2.png",
       text: "Modified A data in Page X",
       time: "Feb 2, 2023",
     },
     {
       id: 5,
-      avatarImg: "/src/assets/images/iconset-3.png",
+      avatarImg: "/assets/images/iconset-3.png",
       text: "Deleted a page in Project X",
       time: "1 hour ago",
     },

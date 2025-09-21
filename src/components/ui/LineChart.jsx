@@ -15,7 +15,7 @@ export default function CustomLineChart(LineData) {
     </div>
 
 
-<img className='line-chart-img' alt='Line chart' src='src/assets/charts/LineChart.png'>
+<img className='line-chart-img' alt='Line chart' src='/assets/charts/LineChart.png'>
 </img>
 </div>
 

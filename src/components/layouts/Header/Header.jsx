@@ -12,12 +12,12 @@ function Header() {
  
     {
       label: "Theme",
-      icon: "/src/assets/icons/Sun.svg",
+      icon: "/assets/icons/Sun.svg",
       id: "themeSwitch",
       fn: () => dispatch(toggleTheme())
-    } ,{ label: "History", icon: "/src/assets/icons/ClockCounterClockwise.svg" },
-    { label: "Notifications", icon: "/src/assets/icons/Bell.svg" },
-    { label: "Sidebar", icon: "/src/assets/icons/Sidebar.svg", id:"rightSidebar" },
+    } ,{ label: "History", icon: "/assets/icons/ClockCounterClockwise.svg" },
+    { label: "Notifications", icon: "/assets/icons/Bell.svg" },
+    { label: "Sidebar", icon: "/assets/icons/Sidebar.svg", id:"rightSidebar" },
   ];
 
  

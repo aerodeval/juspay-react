@@ -224,8 +224,8 @@ nav .subsection-button:focus::before {
   width: 16px;
   height: 16px;
   background-color: var(--black);
-  -webkit-mask: url("/src/assets/icons/ArrowLineRight.svg") no-repeat center;
-  mask: url("/src/assets/icons/ArrowLineRight.svg") no-repeat center;
+  -webkit-mask: url("/assets/icons/ArrowLineRight.svg") no-repeat center;
+  mask: url("/assets/icons/ArrowLineRight.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
   transition: transform 0.3s ease; 

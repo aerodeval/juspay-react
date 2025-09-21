@@ -24,7 +24,7 @@ function Sidebar({ isOpen, isMobile, onClose }) {
     if (!iconName) return null;
     return (
       <img 
-        src={`/src/assets/icons/${iconName}.svg`} 
+        src={`/assets/icons/${iconName}.svg`} 
         alt={iconName}
         style={{ width: 20, height: 20 }}
         onError={(e) => {
