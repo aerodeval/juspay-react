@@ -47,11 +47,20 @@ export const lightTheme = createTheme({
           backgroundColor: '#F7F9FB',
           borderRadius: 16,
           padding: 24,
-          boxShadow: 'none',
           border: 'none',
+          boxShadow: "none",
+          backgroundImage: "none",
+        },
+      },
+    },    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: "none",
+          backgroundImage: "none",
         },
       },
     },
+
     MuiTableHead: {
       styleOverrides: {
         root: {
@@ -117,9 +126,18 @@ export const darkTheme = createTheme({
           padding: 24,
           boxShadow: 'none',
           border: 'none',
+          backgroundImage: "none",
+        },
+      },
+    },    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: "none",
+          backgroundImage: "none",
         },
       },
     },
+
     MuiTableHead: {
       styleOverrides: {
         root: {

@@ -6,14 +6,16 @@ import Typography from '@mui/material/Typography';
 export default function Card({ minWidth ,width, height, title="Customers" , data , cardColor }) {
   return (
     <div style={{minWidth:minWidth, maxHeight:height}}>
-    <CardMUI sx={{ backgroundColor: cardColor , height: height}}> 
+    <CardMUI sx={{ backgroundColor: cardColor , height: height, boxShadow: "none",
+    backgroundImage: "none", }}> 
       {title && (
         <div className='card-title'>
             <h2>
           {title}</h2>
         </div>
       )}
-      <CardContent sx={{ p: 0 ,paddingBottom: "0 !important", height:"100%"}}> {/* padding handled at Card level */}
+      <CardContent sx={{ p: 0 ,paddingBottom: "0 !important", height:"100%",boxShadow: "none",
+    backgroundImage: "none",}}> {/* padding handled at Card level */}
         {data}
       </CardContent>
 

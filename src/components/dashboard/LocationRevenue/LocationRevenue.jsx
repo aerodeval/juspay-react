@@ -19,7 +19,7 @@ export default function LocationRevenue() {
       data={
         <div className="location-revenue-container">
           <div className="map">
-            <img src="/assets/icons/Map.svg" alt="Map" />
+            <img src="/assets/charts/Map.png" alt="Map" />
           </div>
 
           {cityData.map((item, index) => (

@@ -53,7 +53,7 @@ function RightPanel({ isOpen, isMobile, onClose }) {
     <div className="contact-list">
       {contactsData.map((contact) => (
 
-        <div className='contact-item'>
+        <div key={contact.name} className='contact-item'>
            <div className="contact-avatar">
 
 <ImageAvatar imgSrc={contact.avatar} 

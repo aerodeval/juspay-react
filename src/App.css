@@ -147,6 +147,14 @@ margin-bottom: 16px;
 .recharts-legend-item-text span{
   color: var(--black);
 }
+
+.MuiPaper-root.MuiCard-root {
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .main-screen {

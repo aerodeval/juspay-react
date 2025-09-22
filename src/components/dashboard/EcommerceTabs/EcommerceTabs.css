@@ -41,6 +41,17 @@ line-height: 20px; /* 142.857% */
     gap: 28px; 
 }
 
+
+.eco-tab{
+  border-radius: 16px;
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+.eco-tab:hover {
+  transform: scale(1.1); /* scales up when pressed */
+  box-shadow: 0px 6px 10px var(--black-5); /* stronger shadow on press */
+}
+
 /* Tablets and below (max-width: 1024px) → 1 column */
 @media (max-width: 1024px) {
     .eco-tabs-grid {

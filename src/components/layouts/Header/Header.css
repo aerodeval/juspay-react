@@ -154,6 +154,20 @@ tbody{
 }
 
 
+//animations
+#themeSwitch img{
+  transition: transform 1s ease !important;
+}
+#themeSwitch:active img{
+  transform: rotate(180deg) !important;
+}
+
+
+.action-button:active{
+  transform:scale(1.1) ease-in-out;
+}
+
+
 @media (max-width: 1200px) {
   .breadcrumb-item {
     display: none;
@@ -169,6 +183,13 @@ tbody{
   }
 } 
 
+.action-button {
+  transition: transform 0.2s ease-in-out; /* smooth animation */
+}
+
+.action-button:active {
+  transform: scale(1.1); /* scales up when pressed */
+}
 
 @media (max-width: 1024px) {
   .breadcrumb-container{

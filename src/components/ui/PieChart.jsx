@@ -11,7 +11,7 @@ export default function CustomPieChart({ pieData }) {
   })) || data;
 
   return (
-    <ResponsiveContainer minWidth={154} minHeight={260}> 
+    <ResponsiveContainer minWidth={154} minHeight={246}> 
       <PieChart width={"100%"} >
         <Pie
           data={transformedData}

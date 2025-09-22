@@ -73,12 +73,22 @@
   gap: var(--space-2);
   padding: var(--space-1);
   border-radius: var(--radius-md);
-  transition: background-color 0.2s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  will-change: transform, background;
 }
 
+
+.contact-item{
+  border-radius: var(--radius-md);
+  transition: transform 0.3s ease, background 0.3s ease;
+  will-change: transform, background;
+}
+
+
 .activity-item:hover,
-.notification-item:hover {
+.notification-item:hover, .contact-item:hover {
   background: var(--light);
+  transform: scale(1.1);
 }
 
 

@@ -72,9 +72,6 @@ const OrdersList = ({ data, itemsPerPage = 5 }) => {
   };
 
   // Generate avatar initials
-  const getAvatarInitials = (name) => {
-    return name.split(' ').map(n => n[0]).join('').toUpperCase();
-  };
 
   return (
     <div className="orders-list-container">
@@ -137,71 +134,63 @@ const OrdersList = ({ data, itemsPerPage = 5 }) => {
             </tr>
           </thead>
           <tbody>
-            {currentData.map((order, index) => {
-              const actualIndex = startIndex + index;
-              const isSelected = selectedRows.has(actualIndex);
-              const statusStyle = getStatusStyle(order.status);
-              
-              return (
-                <tr 
-                  key={order.orderId} 
-                  className={`order-row ${isSelected ? 'selected' : ''}`}
-                >
-                  <td className="checkbox-col">
-                    <input
-                      type="checkbox"
-                      checked={isSelected}
-                      onChange={() => handleRowSelect(index)}
-                      className="checkbox"
-                    />
-                  </td>
-                  <td className="order-id">#{order.orderId}</td>
-                  <td className="user-cell">
-                    <div className="user-info">
-                  
-                        <ImageAvatar text={order.user}></ImageAvatar>
-                      
-                   
-                    </div>
-                  </td>
-                  <td className="project-cell">{order.project}</td>
-                  <td className="address-cell">
-                    <div className="address-info">
-                      <span className="address-text">{order.address}</span>
-                      {/* <span className="address-icon">
-                      <img src={iconMap.Calendar}></img>
+  {currentData.length > 0 ? (
+    currentData.map((order, index) => {
+      const actualIndex = startIndex + index;
+      const isSelected = selectedRows.has(actualIndex);
+      const statusStyle = getStatusStyle(order.status);
 
-                      </span> */}
-                    </div>
-                  </td>
-                  <td className="date-cell">
-                    <div className="date-info">
-                    <img src={iconMap.Calendar}></img>
-                      <span className="date-text">{order.date}</span>
+      return (
+        <tr key={order.orderId} className={`order-row ${isSelected ? 'selected' : ''}`}>
+          <td className="checkbox-col">
+            <input
+              type="checkbox"
+              checked={isSelected}
+              onChange={() => handleRowSelect(index)}
+              className="checkbox"
+            />
+          </td>
+          <td className="order-id">#{order.orderId}</td>
+          <td className="user-cell">
+            <div className="user-info">
+              <ImageAvatar text={order.user}></ImageAvatar>
+            </div>
+          </td>
+          <td className="project-cell">{order.project}</td>
+          <td className="address-cell">
+            <div className="address-info">
+              <span className="address-text">{order.address}</span>
+            </div>
+          </td>
+          <td className="date-cell">
+            <div className="date-info">
+              <img src={iconMap.Calendar} alt="calendar" />
+              <span className="date-text">{order.date}</span>
+            </div>
+          </td>
+          <td className="status-cell">
+            <div className="status-info">
+              <span className="status-dot" style={{ backgroundColor: statusStyle.dot }}></span>
+              <span className="status-text" style={{ color: statusStyle.color }}>
+                {order.status}
+              </span>
+            </div>
+          </td>
+          <td className="actions-col">
+            <button className="more-actions">⋯</button>
+          </td>
+        </tr>
+      );
+    })
+  ) : (
+    <tr>
+      <td colSpan="8" style={{ textAlign: "center", padding: "20px" }}>
+        No results found
+      </td>
+    </tr>
+  )}
+</tbody>
 
-                    </div>
-                  </td>
-                  <td className="status-cell">
-                    <div className="status-info">
-                      <span 
-                        className="status-dot"
-                        style={{ backgroundColor: statusStyle.dot }}
-                      ></span>
-                      <span 
-                        className="status-text"
-                        style={{ color: statusStyle.color }}
-                      >
-                        {order.status}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="actions-col">
-                    <button className="more-actions">⋯</button>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
         </table>
       </div>
 
