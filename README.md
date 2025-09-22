@@ -21,8 +21,8 @@ Features **light/dark theme switching** using Redux and CSS variables, with inte
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/aerodeval/juspay-react.git
+   cd juspay-react
    ```
 
 2. **Install dependencies:**
