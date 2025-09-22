@@ -137,7 +137,7 @@ margin-bottom: 16px;
   
 }
 
-.MuiPaper-root {
+.toolbar-actions .MuiPaper-root {
   background-color: #F7F9FB !important;
 }
 .MuiMenuItem-root{
