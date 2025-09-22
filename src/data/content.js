@@ -181,7 +181,7 @@ export const userData =
   export const contactsData =[
     {
       "name": "Natali Craig",
-      "avatar": "/assets/images/female15.png"
+      "avatar": "/assets/images/Female15.png"
     },
     {
       "name": "Drew Cano",
@@ -201,7 +201,7 @@ export const userData =
     },
     {
       "name": "Koray Okumus",
-      "avatar": "/assets/images/3d03.png"
+      "avatar": "/assets/images/3D03.png"
     }
   ]
 
@@ -209,31 +209,31 @@ export const userData =
   export const activities = [
     {
       id: 1,
-      avatarImg: "/assets/images/3d05.png",
+      avatarImg: "/assets/images/3D05.png",
       text: "You have a bug that needs to be fixed.",
       time: "Just now",
     },
     {
       id: 2,
-      avatarImg: "/assets/images/iconset.png",
+      avatarImg: "/assets/images/IconSet.png",
       text: "Released a new version",
       time: "59 minutes ago",
     },
     {
       id: 3,
-      avatarImg: "/assets/images/iconset-1.png",
+      avatarImg: "/assets/images/IconSet-1.png",
       text: "Submitted a bug",
       time: "12 hours ago",
     },
     {
       id: 4,
-      avatarImg: "/assets/images/iconset-2.png",
+      avatarImg: "/assets/images/IconSet-2.png",
       text: "Modified A data in Page X",
       time: "Feb 2, 2023",
     },
     {
       id: 5,
-      avatarImg: "/assets/images/iconset-3.png",
+      avatarImg: "/assets/images/IconSet-3.png",
       text: "Deleted a page in Project X",
       time: "1 hour ago",
     },

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
 import Sidebar from './components/layouts/Sidebar/Sidebar'
@@ -27,44 +27,22 @@ function AppContent() {
   }, []);
 
   // Handle sidebar toggle functions
-  const toggleLeftSidebar = () => {
+  const toggleLeftSidebar = useCallback(() => {
     setLeftSidebarOpen(!leftSidebarOpen);
-  };
+  }, [leftSidebarOpen]);
 
-  const toggleRightSidebar = () => {
+  const toggleRightSidebar = useCallback(() => {
     setRightSidebarOpen(!rightSidebarOpen);
-  };
+  }, [rightSidebarOpen]);
 
   const closeSidebars = () => {
     setLeftSidebarOpen(false);
     setRightSidebarOpen(false);
   };
 
-  // Add click handlers to buttons
-  useEffect(() => {
-    const leftSidebarBtn = document.getElementById('leftSidebar');
-    const rightSidebarBtn = document.getElementById('rightSidebar');
-
-    if (leftSidebarBtn) {
-      leftSidebarBtn.addEventListener('click', toggleLeftSidebar);
-    }
-
-    if (rightSidebarBtn) {
-      rightSidebarBtn.addEventListener('click', toggleRightSidebar);
-    }
-
-    return () => {
-      if (leftSidebarBtn) {
-        leftSidebarBtn.removeEventListener('click', toggleLeftSidebar);
-      }
-      if (rightSidebarBtn) {
-        rightSidebarBtn.removeEventListener('click', toggleRightSidebar);
-      }
-    };
-  }, []);
 
   return (
-    <div className={`app-layout ${isOrdersPage ? 'no-right-panel' : ''}`}>
+    <div className="app-layout">
       {/* Overlay for mobile */}
       {(leftSidebarOpen || rightSidebarOpen) && isMobile && (
         <div className="sidebar-overlay" onClick={closeSidebars}></div>
@@ -76,7 +54,10 @@ function AppContent() {
         onClose={closeSidebars}
       />
       <div className="main-content">
-        <Header></Header>
+        <Header 
+          onToggleLeftSidebar={toggleLeftSidebar}
+          onToggleRightSidebar={toggleRightSidebar}
+        />
         <main className="main-screen">
           <div className="content-area">
             <Routes>
@@ -88,7 +69,7 @@ function AppContent() {
         </main>
       </div>
       
-      {!isOrdersPage && (
+      {(!isOrdersPage || rightSidebarOpen) && (
         <RightPanel 
           isOpen={rightSidebarOpen} 
           isMobile={isMobile} 

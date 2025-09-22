@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../../data/themeSlice";
 import './Header.css';
 
-function Header() {
+function Header({ onToggleLeftSidebar, onToggleRightSidebar }) {
 
   const dispatch = useDispatch();
  const headerButtons = [
@@ -17,7 +17,7 @@ function Header() {
       fn: () => dispatch(toggleTheme())
     } ,{ label: "History", icon: "/assets/icons/ClockCounterClockwise.svg" },
     { label: "Notifications", icon: "/assets/icons/Bell.svg" },
-    { label: "Sidebar", icon: "/assets/icons/Sidebar.svg", id:"rightSidebar" },
+    { label: "Sidebar", icon: "/assets/icons/Sidebar.svg", onClick: onToggleRightSidebar },
   ];
 
  
@@ -29,8 +29,13 @@ function Header() {
     <header className="app-header">
       <div className="header-left">
         <div>
-          <button id='leftSidebar' className="action-button" aria-label="Sidebar">
-        <img src={iconMap.sidebar} className="action-icon" /></button>
+          <button 
+            className="action-button" 
+            aria-label="Sidebar"
+            onClick={onToggleLeftSidebar}
+          >
+            <img src={iconMap.sidebar} className="action-icon" />
+          </button>
         </div>
         <div>
         <button className="action-button" aria-label="Favourite">
@@ -74,7 +79,7 @@ function Header() {
           key={btn.label}
           className="action-button"
           aria-label={btn.label}
-          onClick={btn.fn}
+          onClick={btn.fn || btn.onClick}
         >
           <img src={btn.icon} alt={btn.label} className="action-icon" />
         </button>

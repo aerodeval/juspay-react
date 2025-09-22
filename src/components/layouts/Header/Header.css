@@ -56,6 +56,7 @@ span.breadcrumb-item.active{
   height: 16px;
   margin-right: var(--space-2);
   opacity: 0.6;
+  top:17px !important;
 }
 
 header .search-input {
@@ -161,13 +162,16 @@ tbody{
 /* Mobile responsiveness */
 @media (max-width: 768px) {
 
-  
+  .header-actions,.header-left {
+    gap:4px;
+
+  }
   .app-header {
     padding: 0 var(--space-4);
   }
   
   .search-container {
-    min-width: 200px;
+    min-width: 200px !important;
   }
   
   .page-title {
@@ -181,7 +185,7 @@ tbody{
 
 @media (max-width: 480px) {
   .search-container {
-    min-width: 150px;
+    min-width: 150px !important;
   }
   
   .header-center {
