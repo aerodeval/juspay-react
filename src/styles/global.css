@@ -10,96 +10,236 @@ html, body {
 }
 
 :root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    --background: #ffffff;
-    --foreground: #1C1C1C;
-    --brand:#1C1C1C;
-    --black: #1C1C1C;
-    --black-5: #1c1c1c0D;
-    --black-10: #1c1c1c1A;
-    --black-20: #1c1c1c33;
-    --black-30: #1c1c1c4D;
-    --black-40: #1c1c1c66;
-    --black-50: #1c1c1c80;
-    --black-60: #1c1c1c99;
-    --black-70: #1c1c1cB3;
-    --black-80: #1c1c1cCC;
-    --black-90: #1c1c1cE6;
-    --blue:#E3F5FF;
-    --bar:#E6EEF5;
-    --purple:#E5ECF6;
-    --light:#F7F9FB;
-    --white:#FFFFFF;
-    --primary: #F7F9FB;
-    --secondary: #A8C5DA;
-    --secondary-indigo:#95A4FC;
-    --indigo:#8A8CD9;
-    --secondary-blue:#B1E3FF;
-    --mint:#BAEDBD;
-    --secondary-green:#A1E3CB;
-    --green:#4AA785;
-    --pending:#59A8D4;
-    --rejected: rgba(28, 28, 28, 0.4); /* 40% opacity */
-    --yellow:#FFC555;
-    --secondary-yellow:#FFE999;  
-    --radius-md: 8px;
-    --radius-lg: 16px;
-     /* spacing */
-     --space-1: 4px;
-     --space-2: 8px;
-     --space-3: 12px;
-     --space-4: 16px;
-     --space-6: 24px;
-     --space-8: 32px;
-       /* typography */
-    --text-xs: 12px;
-    --text-sm: 14px;
-    --text-md: 16px;
-    --text-lg: 20px;
-    --text-xl: 24px;
-    --font-weight-normal: 400;
-    --font-weight-bold: 600;
- 
+  /* Light theme colors - default */
+  --background: #ffffff;
+  --foreground: #1C1C1C;
+  --brand: #1C1C1C;
+  --black: #1C1C1C;
+  --black-5: #1c1c1c0D;
+  --black-10: #1c1c1c1A;
+  --black-20: #1c1c1c33;
+  --black-30: #1c1c1c4D;
+  --black-40: #1c1c1c66;
+  --black-50: #1c1c1c80;
+  --black-60: #1c1c1c99;
+  --black-70: #1c1c1cB3;
+  --black-80: #1c1c1cCC;
+  --black-90: #1c1c1cE6;
+  --blue: #E3F5FF;
+  --bar: #E6EEF5;
+  --purple: #E5ECF6;
+  --light: #F7F9FB;
+  --white: #FFFFFF;
+  --primary: #F7F9FB;
+  --secondary: #A8C5DA;
+  --secondary-indigo: #95A4FC;
+  --indigo: #8A8CD9;
+  --secondary-blue: #B1E3FF;
+  --mint: #BAEDBD;
+  --secondary-green: #A1E3CB;
+  --green: #4AA785;
+  --pending: #59A8D4;
+  --rejected: rgba(28, 28, 28, 0.4);
+  --yellow: #FFC555;
+  --secondary-yellow: #FFE999;
   
-      /* z-index */
-      --z-dropdown: 1000;
-      --z-modal: 1300;
-      --z-toast: 1500;
+  /* MUI specific colors */
+  --mui-primary: var(--primary);
+  --mui-secondary: var(--secondary);
+  --mui-background-default: var(--background);
+  --mui-background-paper: var(--light);
+  --mui-text-primary: var(--foreground);
+  --mui-text-secondary: var(--indigo);
+  --mui-card-background: transparent;
   
-  }
+  /* Design tokens */
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  
+  /* Typography */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-modal: 1300;
+  --z-toast: 1500;
+}
   
   
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #1C1C1C;
-      --foreground: #FFFFFF;
-      --white-40:#232323;
-      --brand:#C6C7F8;
-      --black:#FFFFFF;
-      --black-5: #ffffff0D;  /* 5% opacity */
-      --black-10: #ffffff1A; /* 10% */
-      --black-20: #ffffff33; /* 20% */
-      --black-30: #ffffff4D; /* 30% */
-      --black-40: #ffffff66; /* 40% */
-      --black-50: #ffffff80; /* 50% */
-      --black-60: #ffffff99; /* 60% */
-      --black-70: #ffffffB3; /* 70% */
-      --black-80: #ffffffCC; /* 80% */
-      --black-90: #ffffffE6; /* 90% */
-      --light: rgba(255, 255, 255, 0.05); /* 5% opacity white */
-      --white:#1C1C1C;
-      --rejected: rgba(28, 28, 28, 0.4); /* 40% opacity */
+/* Light theme class - explicit override */
+body.light-theme {
+  /* Light theme colors - explicit */
+  --background: #ffffff !important;
+  --foreground: #1C1C1C !important;
+  --brand: #1C1C1C !important;
+  --black: #1C1C1C !important;
+  --black-5: #1c1c1c0D !important;
+  --black-10: #1c1c1c1A !important;
+  --black-20: #1c1c1c33 !important;
+  --black-30: #1c1c1c4D !important;
+  --black-40: #1c1c1c66 !important;
+  --black-50: #1c1c1c80 !important;
+  --black-60: #1c1c1c99 !important;
+  --black-70: #1c1c1cB3 !important;
+  --black-80: #1c1c1cCC !important;
+  --black-90: #1c1c1cE6 !important;
+  --blue: #E3F5FF !important;
+  --bar: #E6EEF5 !important;
+  --purple: #E5ECF6 !important;
+  --light: #F7F9FB !important;
+  --white: #FFFFFF !important;
+  --primary: #F7F9FB !important;
+  --secondary: #A8C5DA !important;
+  --secondary-indigo: #95A4FC !important;
+  --indigo: #8A8CD9 !important;
+  --secondary-blue: #B1E3FF !important;
+  --mint: #BAEDBD !important;
+  --secondary-green: #A1E3CB !important;
+  --green: #4AA785 !important;
+  --pending: #59A8D4 !important;
+  --rejected: rgba(28, 28, 28, 0.4) !important;
+  --yellow: #FFC555 !important;
+  --secondary-yellow: #FFE999 !important;
   
-    }
+  /* MUI specific colors for light theme */
+  --mui-primary: #F7F9FB !important;
+  --mui-secondary: #A8C5DA !important;
+  --mui-background-default: #ffffff !important;
+  --mui-background-paper: #F7F9FB !important;
+  --mui-text-primary: #1C1C1C !important;
+  --mui-text-secondary: #8A8CD9 !important;
+  --mui-card-background: transparent !important;
 
-    .section-icon img, .toolbar-actions img, .pagination-btn img, .search-icon img, .header-actions img, .header-left img{
-      filter: invert();
-    }
+
+  
+}
+
+
+
+
+
+/* Dark theme class-based approach - higher specificity */
+body.dark-theme {
+  /* Dark theme colors */
+  --background: #1C1C1C !important;
+  --foreground: #FFFFFF !important;
+  --brand: #C6C7F8 !important;
+  --black: #FFFFFF !important;
+  --black-5: #ffffff0D !important;
+  --black-10: #ffffff1A !important;
+  --black-20: #ffffff33 !important;
+  --black-30: #ffffff4D !important;
+  --black-40: #ffffff66 !important;
+  --black-50: #ffffff80 !important;
+  --black-60: #ffffff99 !important;
+  --black-70: #ffffffB3 !important;
+  --black-80: #ffffffCC !important;
+  --black-90: #ffffffE6 !important;
+  --light: rgba(255, 255, 255, 0.05) !important;
+  --white: #1C1C1C !important;
+  --white-40: #232323 !important;
+  --primary: #C6C7F8 !important;
+  --secondary: #95A4FC !important;
+  --rejected: rgba(28, 28, 28, 0.4) !important;
+  --search-box:#232323;
+
+  /* MUI specific colors for dark theme */
+  --mui-primary: #C6C7F8 !important;
+  --mui-secondary: #95A4FC !important;
+  --mui-background-default: #1C1C1C !important;
+  --mui-background-paper: rgba(255, 255, 255, 0.05) !important;
+  --mui-text-primary: #FFFFFF !important;
+  --mui-text-secondary: #95A4FC !important;
+  --mui-card-background: #282828 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme colors */
+    --search-box:#fafbfd;
+    --background: #1C1C1C;
+    --foreground: #FFFFFF;
+    --brand: #C6C7F8;
+    --black: #FFFFFF;
+    --black-5: #ffffff0D;
+    --black-10: #ffffff1A;
+    --black-20: #ffffff33;
+    --black-30: #ffffff4D;
+    --black-40: #ffffff66;
+    --black-50: #ffffff80;
+    --black-60: #ffffff99;
+    --black-70: #ffffffB3;
+    --black-80: #ffffffCC;
+    --black-90: #ffffffE6;
+    --light: rgba(255, 255, 255, 0.05);
+    --white: #1C1C1C;
+    --white-40: #232323;
+    --primary: var(--brand);
+    --secondary: var(--secondary-indigo);
+    --rejected: rgba(28, 28, 28, 0.4);
+    
+    /* MUI specific colors for dark theme */
+    --mui-primary: var(--brand);
+    --mui-secondary: var(--secondary-indigo);
+    --mui-background-default: var(--background);
+    --mui-background-paper: var(--light);
+    --mui-text-primary: var(--foreground);
+    --mui-text-secondary: var(--secondary-indigo);
+    --mui-card-background: #282828;
   }
+}
+
+
+
+/* Reset icon inversion for light theme */
+body.light-theme .section-icon img,
+body.light-theme .toolbar-actions img,
+body.light-theme .pagination-btn img,
+body.light-theme .search-icon img,
+body.light-theme .header-actions img,
+body.light-theme .header-left img {
+  filter: none !important;
+}
+
+/* Icon inversion for dark theme */
+body.dark-theme .section-icon img,
+body.dark-theme .toolbar-actions img,
+body.dark-theme .pagination-btn img,
+body.dark-theme .search-icon img,
+body.dark-theme .header-actions img,
+body.dark-theme .header-left img {
+  filter: invert();
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-icon img,
+  .toolbar-actions img,
+  .pagination-btn img,
+  .search-icon img,
+  .header-actions img,
+  .header-left img {
+    filter: invert();
+  }
+}
 
   
   

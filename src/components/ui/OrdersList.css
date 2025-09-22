@@ -75,7 +75,7 @@
   padding: 8px 12px 8px 36px;
   border-radius: var(--8, 8px);
   border: 1px solid var(--black-10);
-  background: var(--white-40);
+  background: var(--search-box);
   font-size: 14px;
   width: 200px;
   outline: none;

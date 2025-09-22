@@ -55,3 +55,45 @@ line-height: 20px; /* 142.857% */
       gap: 16px; /* reduce gap on small screens */
     }
   }
+
+/* Light theme styles for eco-tabs */
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(1) .card-title,
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(4) .card-title {
+  color: #1C1C1C !important;
+}
+
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(2) .stats-data h3,
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(3) .stats-data h3 {
+  color: #1C1C1C !important;
+}
+
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(2) .stats-data p,
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(3) .stats-data p {
+  color: #1C1C1C !important;
+}
+
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(2) .stats-data img,
+body.light-theme .eco-tabs-grid .eco-tab:nth-child(3) .stats-data img {
+  filter: none !important;
+}
+
+/* Dark theme styles for eco-tabs */
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(1) .card-title,
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(4) .card-title {
+  color: #1C1C1C !important;
+}
+
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(2) .stats-data h3,
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(3) .stats-data h3 {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(2) .stats-data p,
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(3) .stats-data p {
+  color: #FFFFFF !important;
+}
+
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(2) .stats-data img,
+body.dark-theme .eco-tabs-grid .eco-tab:nth-child(3) .stats-data img {
+  filter: invert();
+}

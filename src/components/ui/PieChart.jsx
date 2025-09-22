@@ -41,7 +41,7 @@ export default function CustomPieChart({ pieData }) {
             <div style={{ display: "flex", justifyContent: "space-between",  left: "10px",        // This overrides left: 0
                 width: "100%", 
                 position: "relative",  
-                top: "-14px",color:"#000000" }}>
+                top: "-17px",color:"#000000" }}>
               <span>{entry.payload.name}</span>
               <span >${entry.payload.value}</span>
             </div>

@@ -6,23 +6,21 @@ import { toggleTheme } from "../../../data/themeSlice";
 import './Header.css';
 
 function Header({ onToggleLeftSidebar, onToggleRightSidebar }) {
-
   const dispatch = useDispatch();
- const headerButtons = [
- 
+  const mode = useSelector((state) => state.theme.mode);
+  const location = useLocation();
+
+  const headerButtons = [
     {
       label: "Theme",
       icon: "/assets/icons/Sun.svg",
       id: "themeSwitch",
       fn: () => dispatch(toggleTheme())
-    } ,{ label: "History", icon: "/assets/icons/ClockCounterClockwise.svg" },
+    },
+    { label: "History", icon: "/assets/icons/ClockCounterClockwise.svg" },
     { label: "Notifications", icon: "/assets/icons/Bell.svg" },
     { label: "Sidebar", icon: "/assets/icons/Sidebar.svg", onClick: onToggleRightSidebar },
   ];
-
- 
-  const mode = useSelector((state) => state.theme.mode);
-  const location = useLocation();
 
   const pathSegments = location.pathname.split("/").filter(Boolean);
   return (

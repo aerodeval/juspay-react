@@ -132,6 +132,21 @@ margin-bottom: 16px;
   color: var(--black);
 }
 
+.MuiPopper-root{
+  z-index:1000;
+  
+}
+
+.MuiPaper-root {
+  background-color: #F7F9FB !important;
+}
+.MuiMenuItem-root{
+  color:#1c1c1c !important;
+}
+
+.recharts-legend-item-text span{
+  color: var(--black);
+}
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .main-screen {
@@ -157,6 +172,26 @@ margin-bottom: 16px;
     padding: var(--space-3);
   }
 }
+
+@media (max-width:1200px){
+
+  .MuiGrid-container{
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .map{
+    max-width:100% !important;
+  }
+
+}
+
+.map img{
+
+  width:100%;
+}
+
+
 
 /* Sidebar Overlay Styles for Mobile (under 1024px) */
 @media (max-width: 1023px) {

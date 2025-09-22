@@ -5,30 +5,30 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#F7F9FB',         // --primary
+      main: '#F7F9FB',
     },
     secondary: {
-      main: '#A8C5DA',         // --secondary
+      main: '#A8C5DA',
     },
     info: {
-      main: '#E3F5FF',         // --blue
+      main: '#E3F5FF',
     },
     success: {
-      main: '#4AA785',         // --green
+      main: '#4AA785',
     },
     warning: {
-      main: '#FFC555',         // --yellow
+      main: '#FFC555',
     },
     error: {
-      main: '#f44336',         // fallback standard red
+      main: '#f44336',
     },
     background: {
-      default: '#ffffff',      // --background
-      paper: '#F7F9FB',        // --light
+      default: '#ffffff',
+      paper: '#F7F9FB',
     },
     text: {
-      primary: '#1C1C1C',      // --foreground
-      secondary: '#8A8CD9',    // --indigo
+      primary: '#1C1C1C',
+      secondary: '#8A8CD9',
     },
   },
   typography: {
@@ -42,29 +42,27 @@ export const lightTheme = createTheme({
 
   components: {
     MuiCard: {
-        styleOverrides: {
-          root: {
-            borderRadius: 16,
-            padding: '24px',
-            boxShadow: 'none',
+      styleOverrides: {
+        root: {
+          backgroundColor: '#F7F9FB',
+          borderRadius: 16,
+          padding: 24,
+          boxShadow: 'none',
+          border: 'none',
+        },
+      },
+    },
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          "& .MuiTableCell-root": {
+            fontWeight: 400,
+            fontSize: 12,
+            color: '#9FA0A2',
           },
         },
       },
-
-
-
-      MuiTableHead: {
-        styleOverrides: {
-          root: {
-            "& .MuiTableCell-root": {
-              fontWeight: 400,
-              fontSize:"12px",
-              color:" #9FA0A2"
-           
-            },
-          },
-        },
-      },
+    },
   },
 
 })
@@ -74,30 +72,30 @@ export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#C6C7F8',         // --brand 
+      main: '#C6C7F8',
     },
     secondary: {
-      main: '#95A4FC',         // --secondary-indigo
+      main: '#95A4FC',
     },
     info: {
-      main: '#E3F5FF',         // --blue
+      main: '#E3F5FF',
     },
     success: {
-      main: '#4AA785',         // --green
+      main: '#4AA785',
     },
     warning: {
-      main: '#FFC555',         // --yellow
+      main: '#FFC555',
     },
     error: {
       main: '#f44336',
     },
     background: {
-      default: '#1C1C1C',      // --background dark
-      paper: 'rgba(255, 255, 255, 0.05)', // --light dark
+      default: '#1C1C1C',
+      paper: 'rgba(255, 255, 255, 0.05)',
     },
     text: {
-      primary: '#FFFFFF',       // --foreground dark
-      secondary: '#95A4FC',    // --secondary-indigo dark
+      primary: '#FFFFFF',
+      secondary: '#95A4FC',
     },
   },
   typography: {
@@ -110,33 +108,29 @@ export const darkTheme = createTheme({
   shape: {
     borderRadius: 16,
   },
-
   components: {
     MuiCard: {
-        styleOverrides: {
-          root: {
-            backgroundColor:"#282828",
-            borderRadius: 16,
-            padding: '24px',
-            boxShadow: 'none',
+      styleOverrides: {
+        root: {
+          backgroundColor: '#282828',
+          borderRadius: 16,
+          padding: 24,
+          boxShadow: 'none',
+          border: 'none',
+        },
+      },
+    },
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          "& .MuiTableCell-root": {
+            fontWeight: 400,
+            fontSize: 12,
+            color: '#9FA0A2',
           },
         },
       },
-
-
-
-      MuiTableHead: {
-        styleOverrides: {
-          root: {
-            "& .MuiTableCell-root": {
-              fontWeight: 400,
-              fontSize:"12px",
-              color:" #9FA0A2"
-           
-            },
-          },
-        },
-      },
+    },
   },
 
 

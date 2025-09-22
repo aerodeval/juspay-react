@@ -21,6 +21,7 @@
 
 .breadcrumb-container{
 display: flex;
+align-items:center;
 gap: 8px;
 }
 
@@ -106,8 +107,8 @@ tbody{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border: none;
   background: transparent;
   border-radius: var(--radius-md);
@@ -151,6 +152,23 @@ tbody{
   font-weight: var(--font-weight-bold);
   color: var(--foreground);
 }
+
+
+@media (max-width: 1200px) {
+  .breadcrumb-item {
+    display: none;
+  }
+
+  .breadcrumb-container .active{
+    display:block !important;
+  }
+
+  header .search-container {
+
+    min-width:230px;
+  }
+} 
+
 
 @media (max-width: 1024px) {
   .breadcrumb-container{

@@ -24,14 +24,22 @@ function Root() {
     dispatch(setTheme(prefersDark ? "dark" : "light"));
   }, [dispatch]);
 
-  // Toggle .dark-theme class
+  // Toggle theme classes on document.body
   useEffect(() => {
-    if (isDark) document.body.classList.add("dark-theme");
-    else document.body.classList.remove("dark-theme");
+    if (isDark) {
+      document.body.classList.remove("light-theme");
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+      document.body.classList.add("light-theme");
+    }
   }, [isDark]);
 
+  // Select the appropriate MUI theme based on mode
+  const currentTheme = isDark ? darkTheme : lightTheme;
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={currentTheme}>
       <CssBaseline />
       <App />
     </ThemeProvider>
