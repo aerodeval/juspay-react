@@ -40,3 +40,7 @@ line-height: 18px;
   .map{
     max-width: 154px;
   }
+
+  .map img{
+    will-change: transfrom;
+  }
