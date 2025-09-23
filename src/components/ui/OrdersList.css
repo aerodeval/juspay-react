@@ -233,7 +233,9 @@ table {
   gap: 8px;
 }
 
-
+.date-text{
+  flex:none;
+}
 
 
 .date-cell {
@@ -244,6 +246,7 @@ table {
   display: flex;
   align-items: center;
   gap: 8px;
+
 }
 
 
@@ -262,6 +265,7 @@ table {
 }
 
 .status-text {
+  flex:none;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px; /* 150% */
@@ -284,7 +288,8 @@ table {
 
 .more-actions:hover {
   color: #6b7280;
-  background: #f3f4f6;
+  background: var(--black-5);
+  border-radius:6px;
 }
 
 .pagination-container {

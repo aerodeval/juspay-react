@@ -46,6 +46,10 @@ margin-bottom: 16px;
 @media (max-width: 1024px) {
 
 
+  .responsive-mobile-total-sale  .recharts-responsive-container{
+    min-height:428px !important;
+  }
+
   .search-container{
     min-width: 200px;
   }

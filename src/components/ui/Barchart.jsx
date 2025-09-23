@@ -9,7 +9,7 @@ import { stackedChartData } from '../../data/content';
 export default function BarchartCustom(data) {
   return (
 
-<ResponsiveContainer minWidth={384} minHeight={168}>
+<ResponsiveContainer width={"100%"} minHeight={168}>
       <BarChart margin={{ right: 5}}
         data={stackedChartData}
       >

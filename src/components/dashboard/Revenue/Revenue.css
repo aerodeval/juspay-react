@@ -4,7 +4,10 @@
 }
 .line-chart-index{
     display: flex;
-    
+    gap: 8px;
+    position: absolute;
+    top: -18px;
+    left: 25%;
 }
 
 .line-chart-index .dot{
@@ -41,9 +44,9 @@ line-height: 18px; /* 150% */
     object-fit: cover;
 }
 
-
-.line-chart-index{
-    position: absolute;
-    top: -18px;
-    left: 19%;
-}
+@media (max-width: 500px) {
+    .line-chart-index {
+        display: flex;
+        flex-direction:column;
+    }
+  }

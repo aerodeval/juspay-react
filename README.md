@@ -124,7 +124,7 @@ dispatch(toggleTheme())
 ---
 
 ## 📝 Notes
-The Theme switching is still wip
+Line chart and world map was not implemented as i couldnt find a visual chart close to it similar can be used from recharts but same aesthetic is diffcult to match
 
 ## 📄 License
 

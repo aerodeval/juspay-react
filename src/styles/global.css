@@ -226,7 +226,7 @@ body.dark-theme .toolbar-actions img,
 body.dark-theme .pagination-btn img,
 body.dark-theme .search-icon img,
 body.dark-theme .header-actions img,
-body.dark-theme .header-left img {
+body.dark-theme .header-left img ,.date-info img{
   filter: invert();
 }
 
@@ -236,9 +236,10 @@ body.dark-theme .header-left img {
   .pagination-btn img,
   .search-icon img,
   .header-actions img,
-  .header-left img {
+  .header-left img,.date-info img {
     filter: invert();
   }
+  
 }
 
   
