@@ -76,6 +76,7 @@
   border-radius: var(--8, 8px);
   border: 1px solid var(--black-10);
   background: var(--search-box);
+  color: var(--black);
   font-size: 14px;
   width: 200px;
   outline: none;
