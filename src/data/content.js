@@ -376,7 +376,45 @@ export const stackedChartData = [
 
 
 
+export const LineChartData = [
+  {
+    name: 'Jan',
+    "Current Week": 4000,
+    "Previous Week": 2400,
+    amt: 2400,
+  },
+  {
+    name: 'Feb',
+    "Current Week": 3000,
+    "Previous Week": 1398,
+    amt: 2210,
+  },
+  {
+    name: 'Mar',
+    "Current Week": 2000,
+    "Previous Week": 9800,
+    amt: 2290,
+  },
+  {
+    name: 'Apr',
+    "Current Week": 2780,
+    "Previous Week": 3908,
+    amt: 2000,
+  },
+  {
+    name: 'May',
+    "Current Week": 1890,
+    "Previous Week": 4800,
+    amt: 2181,
+  },
+  {
+    name: 'Jun',
+    "Current Week": 2390,
+    "Previous Week": 3800,
+    amt: 2500,
+  },
 
+];
 
 
 

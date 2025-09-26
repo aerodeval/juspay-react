@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Card from '../../ui/Card';
 import { cityData } from '../../../data/content';
 import './LocationRevenue.css';
+import GeographyMap from '../../ui/GeographyMap';
 
 export default function LocationRevenue() {
   const [loaded, setLoaded] = useState(false);
@@ -18,10 +19,12 @@ export default function LocationRevenue() {
       title="Revenue by Location"
       data={
         <div className="location-revenue-container">
-          <div className="map">
-            <img src="/assets/charts/Map.svg" alt="Map" />
-          </div>
+          {/* <div className="map">
+            <img src="/assets/charts/Map.png" alt="Map" />
+          </div> */}
+          <GeographyMap></GeographyMap>
 
+          
           {cityData.map((item, index) => (
             <div className="location-revenue" key={index}>
               <div className="location-stat">

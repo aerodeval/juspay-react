@@ -44,6 +44,12 @@ line-height: 18px; /* 150% */
     object-fit: cover;
 }
 
+
+.revenue-container .recharts-responsive-container .recharts-legend-wrapper{
+    bottom: 265px !important;
+
+}
+
 @media (max-width: 500px) {
     .line-chart-index {
         display: flex;
